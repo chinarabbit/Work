@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA1FE895-AE3E-4F7E-A547-656A7168F1B3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>食品报告.My.MyApplication</StartupObject>
+    <RootNamespace>食品报告</RootNamespace>
+    <AssemblyName>食品报告</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\server7.cqidc.org.cn\共享\本所专用\食品报告\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>1</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>zh-CN</TargetCulture>
+    <PublisherName>重庆市食品药品检验所</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <DisallowUrlActivation>true</DisallowUrlActivation>
+    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationVersion>1.2.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+    <BootstrapperComponentsUrl>http://www.cqidc.org.cn/msdown</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>食品报告.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>食品报告.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1794D266AFF0B3E9A1529BA1C9149B68332759ED</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Web.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="dataviewex.Designer.vb">
+      <DependentUpon>dataviewex.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dataviewex.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dgv列属性.Designer.vb">
+      <DependentUpon>dgv列属性.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dgv列属性.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog_flownext.Designer.vb">
+      <DependentUpon>dialog_flownext.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dialog_flownext.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog_prev.Designer.vb">
+      <DependentUpon>Dialog_prev.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog_prev.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog_日期筛选.Designer.vb">
+      <DependentUpon>Dialog_日期筛选.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog_日期筛选.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog_是否筛选.Designer.vb">
+      <DependentUpon>Dialog_是否筛选.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog_是否筛选.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog_标准筛选.Designer.vb">
+      <DependentUpon>dialog_标准筛选.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dialog_标准筛选.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_tiaoma.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_tiaoma.Designer.vb">
+      <DependentUpon>Form_tiaoma.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_协议管理.Designer.vb">
+      <DependentUpon>Form_协议管理.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_协议管理.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_导出检验项目.Designer.vb">
+      <DependentUpon>form_导出检验项目.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_导出检验项目.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_打印日志.Designer.vb">
+      <DependentUpon>form_打印日志.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_打印日志.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_批量修改.Designer.vb">
+      <DependentUpon>form_批量修改.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_批量修改.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_批量判定.Designer.vb">
+      <DependentUpon>Form_批量判定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_批量判定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_批量编辑.Designer.vb">
+      <DependentUpon>Form_批量编辑.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_批量编辑.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_报告发放.Designer.vb">
+      <DependentUpon>form_报告发放.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_报告发放.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_报告审核.Designer.vb">
+      <DependentUpon>Form_报告审核.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_报告审核.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_报告打印.Designer.vb">
+      <DependentUpon>form_报告打印.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_报告打印.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_报告签发.Designer.vb">
+      <DependentUpon>Form_报告签发.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_报告签发.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_权限管理.Designer.vb">
+      <DependentUpon>Form_权限管理.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_权限管理.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_报告存档.Designer.vb">
+      <DependentUpon>form_报告存档.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_报告存档.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_检验缴费.Designer.vb">
+      <DependentUpon>form_检验缴费.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_检验缴费.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_模板设置.Designer.vb">
+      <DependentUpon>Form_模板设置.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_模板设置.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_留样管理.Designer.vb">
+      <DependentUpon>Form_留样管理.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_留样管理.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_查询统计.Designer.vb">
+      <DependentUpon>form_查询统计.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_查询统计.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_自定义列.Designer.vb">
+      <DependentUpon>form_自定义列.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_自定义列.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_附页管理.Designer.vb">
+      <DependentUpon>form_附页管理.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_附页管理.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainform.Designer.vb">
+      <DependentUpon>mainform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mainform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_logini.Designer.vb">
+      <DependentUpon>form_logini.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_logini.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm1.Designer.vb">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="mydgv.Designer.vb">
+      <DependentUpon>mydgv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mydgv.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="form_批量修改字段.Designer.vb">
+      <DependentUpon>form_批量修改字段.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_批量修改字段.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_报告编制.Designer.vb">
+      <DependentUpon>form_报告编制.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_报告编制.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_符号.Designer.vb">
+      <DependentUpon>form_符号.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_符号.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_缴费单管理.Designer.vb">
+      <DependentUpon>form_缴费单管理.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_缴费单管理.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="dgv列属性.resx">
+      <DependentUpon>dgv列属性.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog_flownext.resx">
+      <DependentUpon>dialog_flownext.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog_prev.resx">
+      <DependentUpon>Dialog_prev.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog_日期筛选.resx">
+      <DependentUpon>Dialog_日期筛选.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog_是否筛选.resx">
+      <DependentUpon>Dialog_是否筛选.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog_标准筛选.resx">
+      <DependentUpon>dialog_标准筛选.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_tiaoma.resx">
+      <DependentUpon>Form_tiaoma.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_logini.resx">
+      <DependentUpon>form_logini.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_协议管理.resx">
+      <DependentUpon>Form_协议管理.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_导出检验项目.resx">
+      <DependentUpon>form_导出检验项目.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_打印日志.resx">
+      <DependentUpon>form_打印日志.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_批量修改.resx">
+      <DependentUpon>form_批量修改.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_批量判定.resx">
+      <DependentUpon>Form_批量判定.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_批量编辑.resx">
+      <DependentUpon>Form_批量编辑.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_报告发放.resx">
+      <DependentUpon>form_报告发放.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_报告审核.resx">
+      <DependentUpon>Form_报告审核.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_报告打印.resx">
+      <DependentUpon>form_报告打印.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_报告签发.resx">
+      <DependentUpon>Form_报告签发.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_权限管理.resx">
+      <DependentUpon>Form_权限管理.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_报告存档.resx">
+      <DependentUpon>form_报告存档.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_检验缴费.resx">
+      <DependentUpon>form_检验缴费.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_模板设置.resx">
+      <DependentUpon>Form_模板设置.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_留样管理.resx">
+      <DependentUpon>Form_留样管理.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_查询统计.resx">
+      <DependentUpon>form_查询统计.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_自定义列.resx">
+      <DependentUpon>form_自定义列.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_附页管理.resx">
+      <DependentUpon>form_附页管理.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm1.resx">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform.resx">
+      <DependentUpon>mainform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mydgv.resx">
+      <DependentUpon>mydgv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_批量修改字段.resx">
+      <DependentUpon>form_批量修改字段.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_报告编制.resx">
+      <DependentUpon>form_报告编制.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_符号.resx">
+      <DependentUpon>form_符号.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_缴费单管理.resx">
+      <DependentUpon>form_缴费单管理.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="My Project\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\form_报告编制.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="untitled.ico" />
+    <Content Include="Web.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
