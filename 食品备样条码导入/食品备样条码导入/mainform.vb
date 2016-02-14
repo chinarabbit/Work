@@ -169,4 +169,8 @@
         If Form_报告签发.WindowState = FormWindowState.Minimized Then Form_报告签发.WindowState = FormWindowState.Normal
         Form_报告签发.Select()
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        '4555
+    End Sub
 End Class

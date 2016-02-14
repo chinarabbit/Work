@@ -39,6 +39,7 @@ Partial Class mainform
         Me.报告编制 = New System.Windows.Forms.Button()
         Me.报告审核 = New System.Windows.Forms.Button()
         Me.报告签发 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         '备样条码
@@ -199,11 +200,21 @@ Partial Class mainform
         Me.报告签发.Text = "报告签发"
         Me.报告签发.UseVisualStyleBackColor = True
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(47, 359)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(97, 35)
+        Me.Button2.TabIndex = 16
+        Me.Button2.Text = "test"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'mainform
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(673, 414)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.报告签发)
         Me.Controls.Add(Me.报告审核)
         Me.Controls.Add(Me.报告编制)
@@ -244,4 +255,5 @@ Partial Class mainform
     Friend WithEvents 报告编制 As Button
     Friend WithEvents 报告审核 As Button
     Friend WithEvents 报告签发 As Button
+    Friend WithEvents Button2 As Button
 End Class
