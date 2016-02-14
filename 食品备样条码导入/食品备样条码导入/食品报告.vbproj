@@ -29,7 +29,7 @@
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
     <DisallowUrlActivation>true</DisallowUrlActivation>
-    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationRevision>14</ApplicationRevision>
     <ApplicationVersion>1.2.1.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -258,6 +258,12 @@
     <Compile Include="Form_模板设置.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_版本更新.Designer.vb">
+      <DependentUpon>Form_版本更新.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_版本更新.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_留样管理.Designer.vb">
       <DependentUpon>Form_留样管理.vb</DependentUpon>
     </Compile>
@@ -413,6 +419,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_模板设置.resx">
       <DependentUpon>Form_模板设置.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_版本更新.resx">
+      <DependentUpon>Form_版本更新.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_留样管理.resx">
       <DependentUpon>Form_留样管理.vb</DependentUpon>

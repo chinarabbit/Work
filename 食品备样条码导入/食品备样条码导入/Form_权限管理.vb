@@ -206,4 +206,8 @@ Public Class Form_权限管理
 
         End If
     End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Form_版本更新.Show()
+    End Sub
 End Class

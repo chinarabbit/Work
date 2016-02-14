@@ -75,6 +75,7 @@
 
         End Try
         Me.Text = "主界面-" + glb_姓名
+        If glb_loginname = "sa" Then Button2.Visible = True Else Button2.Visible = False
     End Sub
 
     Private Sub 权限设置_Click(sender As Object, e As EventArgs) Handles 权限设置.Click
@@ -171,6 +172,13 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        '4555
+        Dim str As String
+        Try
+            str = System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString
+            MessageBox.Show(str)
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 End Class

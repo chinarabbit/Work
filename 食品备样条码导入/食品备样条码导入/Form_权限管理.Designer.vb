@@ -38,6 +38,7 @@ Partial Class Form_权限管理
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         '权限列表
@@ -174,11 +175,21 @@ Partial Class Form_权限管理
         Me.Button5.Text = "下载签名"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(633, 332)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(115, 31)
+        Me.Button6.TabIndex = 17
+        Me.Button6.Text = "版本更新"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'Form_权限管理
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(760, 555)
+        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -219,4 +230,5 @@ Partial Class Form_权限管理
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents FolderBrowserDialog1 As System.Windows.Forms.FolderBrowserDialog
+    Friend WithEvents Button6 As Button
 End Class

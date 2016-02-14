@@ -35,8 +35,8 @@ Public Class LoginForm1
                 glb_科室 = reader.Item(2).ToString
                 key.SetValue("loginname", username)
             End If
-
             reader.Close()
+
             cmd.CommandType = CommandType.StoredProcedure
             cmd.CommandText = "zyn_读取权限"
             cmd.Parameters.Clear()
@@ -58,6 +58,8 @@ Public Class LoginForm1
             Else
                 Me.Label1.Text = "没有系统权限"
             End If
+
+
             con.Close()
 
         Catch ex As Exception

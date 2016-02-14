@@ -235,6 +235,7 @@ Partial Class mainform
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(5)
         Me.Name = "mainform"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "主界面"
         Me.ResumeLayout(False)
 

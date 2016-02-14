@@ -59,5 +59,14 @@ Namespace My.Resources
                 resourceCulture = value
             End Set
         End Property
+        
+        '''<summary>
+        '''  查找类似 1 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property new_version() As String
+            Get
+                Return ResourceManager.GetString("new_version", resourceCulture)
+            End Get
+        End Property
     End Module
 End Namespace
