@@ -49,7 +49,6 @@ Public Class LoginForm1
                     glb_auth += "|" + reader.Item("权限名称") + "|"
                 Loop While reader.Read
                 reader.Close()
-
                 Me.Close()
             ElseIf glb_loginname = "sa" Then
                 glb_sqlconstr = constr
@@ -58,8 +57,6 @@ Public Class LoginForm1
             Else
                 Me.Label1.Text = "没有系统权限"
             End If
-
-
             con.Close()
 
         Catch ex As Exception

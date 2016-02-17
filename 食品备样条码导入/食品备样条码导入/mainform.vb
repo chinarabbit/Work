@@ -76,6 +76,9 @@
         End Try
         Me.Text = "主界面-" + glb_姓名
         If glb_loginname = "sa" Then Button2.Visible = True Else Button2.Visible = False
+
+        '显示更新说明
+        Call version_update()
     End Sub
 
     Private Sub 权限设置_Click(sender As Object, e As EventArgs) Handles 权限设置.Click
@@ -171,14 +174,46 @@
         Form_报告签发.Select()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim str As String
+    Sub version_update()
+        Dim curver, localver, localdispversion, displayversion As Version
+        Dim keystr As String = "Software\食品报告"
+        Dim rootkey, key As Microsoft.Win32.RegistryKey
+        rootkey = My.Computer.Registry.CurrentUser
         Try
-            str = System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString
-            MessageBox.Show(str)
+            curver = System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion
+            key = rootkey.OpenSubKey(keystr)
+            If key.GetValue("version") Is Nothing Then
+                key = rootkey.CreateSubKey(keystr)
+                key.SetValue("version", curver.ToString)
+            Else
+                localver = New Version(key.GetValue("version").ToString)
+                localdispversion = New Version(key.GetValue("displayversion", "0.0.0.0").ToString)
+                If curver > localver Then
+                    Dim con As New SqlClient.SqlConnection
+                    Dim cmd As New SqlClient.SqlCommand
+                    Dim reader As SqlClient.SqlDataReader
+                    con.ConnectionString = glb_sqlconstr
+                    cmd.Connection = con
+                    con.Open()
+                    cmd.CommandText = "select top 1 版本号,更新说明 from zyn_版本更新 order by id desc"
+                    reader = cmd.ExecuteReader
+                    If reader.Read Then
+                        displayversion = New Version(reader.Item(0).ToString)
+                        If localdispversion < displayversion Then
+                            MessageBox.Show(reader.Item(1).ToString)
+                            key = rootkey.CreateSubKey(keystr)
+                            key.SetValue("displayversion", displayversion.ToString)
+                        End If
+                    End If
+                    reader.Close()
+                    con.Close()
+                    key = rootkey.CreateSubKey(keystr)
+                    key.SetValue("version", curver.ToString)
+                End If
+            End If
+
         Catch ex As Exception
 
         End Try
-
     End Sub
 End Class

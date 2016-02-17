@@ -23,7 +23,6 @@ Partial Class Form_版本更新
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dgv1 = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -41,6 +40,9 @@ Partial Class Form_版本更新
         Me.Label7 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.版本ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgv1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -49,7 +51,7 @@ Partial Class Form_版本更新
         Me.dgv1.AllowUserToAddRows = False
         Me.dgv1.AllowUserToDeleteRows = False
         Me.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1})
+        Me.dgv1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.版本ID, Me.Column1})
         Me.dgv1.Location = New System.Drawing.Point(12, 34)
         Me.dgv1.MultiSelect = False
         Me.dgv1.Name = "dgv1"
@@ -58,13 +60,6 @@ Partial Class Form_版本更新
         Me.dgv1.RowTemplate.Height = 23
         Me.dgv1.Size = New System.Drawing.Size(147, 438)
         Me.dgv1.TabIndex = 0
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "版本号"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Width = 120
         '
         'Label1
         '
@@ -159,9 +154,9 @@ Partial Class Form_版本更新
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(560, 434)
+        Me.Button1.Location = New System.Drawing.Point(477, 434)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 29)
+        Me.Button1.Size = New System.Drawing.Size(58, 29)
         Me.Button1.TabIndex = 12
         Me.Button1.Text = "新增"
         Me.Button1.UseVisualStyleBackColor = True
@@ -169,9 +164,9 @@ Partial Class Form_版本更新
         'Button2
         '
         Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(198, 434)
+        Me.Button2.Location = New System.Drawing.Point(173, 434)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 29)
+        Me.Button2.Size = New System.Drawing.Size(58, 29)
         Me.Button2.TabIndex = 13
         Me.Button2.Text = "保存"
         Me.Button2.UseVisualStyleBackColor = True
@@ -179,9 +174,9 @@ Partial Class Form_版本更新
         'Button3
         '
         Me.Button3.Enabled = False
-        Me.Button3.Location = New System.Drawing.Point(325, 434)
+        Me.Button3.Location = New System.Drawing.Point(276, 434)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 29)
+        Me.Button3.Size = New System.Drawing.Size(58, 29)
         Me.Button3.TabIndex = 14
         Me.Button3.Text = "取消"
         Me.Button3.UseVisualStyleBackColor = True
@@ -204,18 +199,42 @@ Partial Class Form_版本更新
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(447, 434)
+        Me.Button4.Location = New System.Drawing.Point(387, 434)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 29)
+        Me.Button4.Size = New System.Drawing.Size(58, 29)
         Me.Button4.TabIndex = 17
         Me.Button4.Text = "修改"
         Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(577, 434)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(58, 29)
+        Me.Button5.TabIndex = 18
+        Me.Button5.Text = "删除"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        '版本ID
+        '
+        Me.版本ID.HeaderText = "ID"
+        Me.版本ID.Name = "版本ID"
+        Me.版本ID.ReadOnly = True
+        Me.版本ID.Visible = False
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "版本号"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 130
         '
         'Form_版本更新
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(647, 484)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Label7)
@@ -260,8 +279,10 @@ Partial Class Form_版本更新
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Label7 As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents 版本ID As DataGridViewTextBoxColumn
 End Class
