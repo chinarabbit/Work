@@ -1,4 +1,6 @@
-﻿Public Class mainform
+﻿Imports System.Configuration, System, System.Collections.Specialized
+
+Public Class mainform
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles 备样条码.Click
         Form_tiaoma.Show()
@@ -215,5 +217,10 @@
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim ss As String = ConfigurationManager.AppSettings("test")
+        MessageBox.Show(ss)
     End Sub
 End Class
