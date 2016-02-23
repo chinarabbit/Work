@@ -220,7 +220,7 @@ Public Class mainform
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim ss As String = ConfigurationManager.AppSettings("test")
-        MessageBox.Show(ss)
+        Dim sss As String = ConfigurationManager.AppSettings("test")
+        MessageBox.Show(sss)
     End Sub
 End Class
